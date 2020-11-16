@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="url">jdbc:hsqldb:file:hyper-sql\organizer</entry>
+	<entry key="user">sa</entry>
+	<entry key="pass">admin</entry>
+</properties>
+
