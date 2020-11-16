@@ -20,6 +20,11 @@ public class LoginControllerImp implements LoginController{
 		// TODO Auto-generated method stub
 		loginview.startView();
 	}
+	@Override
+	public void closeView() {
+		// TODO Auto-generated method stub
+		loginview.close();
+	}
 
 	@Override
 	public void checkCredentials(String user, String pass) {
@@ -34,5 +39,6 @@ public class LoginControllerImp implements LoginController{
 		}
 	
 	}
+	
 
 }

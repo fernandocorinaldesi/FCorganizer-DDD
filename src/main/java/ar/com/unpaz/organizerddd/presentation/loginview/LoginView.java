@@ -104,7 +104,7 @@ public class LoginView extends JFrame implements LoginViewOperations{
 	@Override
 	public void close() {
 		// TODO Auto-generated method stub
-		setVisible(false);
+		dispose();
 	}
 	@Override
 	public void setController(LoginController controller) {

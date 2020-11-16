@@ -33,6 +33,7 @@ public class AdminView extends AbstractMainView<User> {
 		});
 		exitButton.addActionListener(e -> {
 			dispose();
+			login.closeView();
 		});
 		logOutButton.addActionListener(e -> {
 			dispose();

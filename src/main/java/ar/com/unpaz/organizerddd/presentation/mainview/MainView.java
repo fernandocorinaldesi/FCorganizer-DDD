@@ -35,7 +35,9 @@ public class MainView extends AbstractMainView<Password> {
 			cardLayout.show(cardPanel, "about");
 		});
 		exitButton.addActionListener(e -> {
+			login.closeView();
 			dispose();
+			
 		});
 		logOutButton.addActionListener(e -> {
 			dispose();
