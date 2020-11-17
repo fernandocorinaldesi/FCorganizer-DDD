@@ -3,6 +3,6 @@
 <properties>
 	<entry key="url">jdbc:hsqldb:file:hyper-sql\organizer</entry>
 	<entry key="user">sa</entry>
-	<entry key="pass">admin</entry>
+	<entry key="pass"></entry>
 </properties>
 

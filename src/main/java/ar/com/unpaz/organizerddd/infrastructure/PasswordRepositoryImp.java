@@ -15,7 +15,7 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 
 	@Override
 	public List<Password> get() {
-		String pslist = "SELECT P.ID,P.SITIO,P.USUARIO,P.CONTRASEÑA, P.USUARIODNI FROM CONTRASEÑAS P ";
+		String pslist = "SELECT P.ID,P.SITIO,P.USUARIO,P.PASSWORD, P.USUARIODNI FROM PASSWORDS P ";
 		List<Password> password = new ArrayList<>();
 		Connection con = DbConection.getConection();
 		try {
@@ -25,7 +25,7 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 				Password pass = new Password(rs.getInt("ID"),
 						                     rs.getString("SITIO"), 
 						                     rs.getString("USUARIO"),
-						                     rs.getString("CONTRASEÑA"),
+						                     rs.getString("PASSWORD"),
 						                     rs.getInt("USUARIODNI"));
 				password.add(pass);
 			}
@@ -39,7 +39,7 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 
 	@Override
 	public void insert(Password psw) {
-		String insertpass = "INSERT INTO CONTRASEÑAS (SITIO,USUARIO,CONTRASEÑA) values(?,?,?) ";
+		String insertpass = "INSERT INTO PASSWORDS (SITIO,USUARIO,PASSWORD) values(?,?,?) ";
 		Connection con = DbConection.getConection();
 		try {
 			PreparedStatement ps = con.prepareStatement(insertpass);
@@ -55,7 +55,7 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 
 	@Override
 	public void delete(int pswId) {
-		String deletepass = "DELETE FROM CONTRASEÑAS WHERE ID=?";
+		String deletepass = "DELETE FROM PASSWORDS WHERE ID=?";
 		Connection con = DbConection.getConection();
 		try (PreparedStatement st = con.prepareStatement(deletepass)) {
 			st.setInt(1,pswId);

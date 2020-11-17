@@ -16,7 +16,7 @@ public class UserRepositoryImp implements IRepository<User>{
 	@Override
 	public List<User> get() {
 		// TODO Auto-generated method stub
-		String uslist = "SELECT U.DNI,U.NOMBRE,U.APELLIDO,U.USERNAME,U.PASSWORD FROM USUARIOS U ";
+		String uslist = "SELECT U.DNI,U.NOMBRE,U.APELLIDO,U.USERNAME,U.PASS FROM USUARIOS U ";
 		List<User> userlist = new ArrayList<>();
 		Connection con = DbConection.getConection();
 		try {
@@ -27,7 +27,7 @@ public class UserRepositoryImp implements IRepository<User>{
 						                     rs.getString("NOMBRE"), 
 						                     rs.getString("APELLIDO"),
 						                     rs.getString("USERNAME"),
-						                     rs.getString("PASSWORD"));
+						                     rs.getString("PASS"));
 				userlist.add(user);
 			}
 
@@ -42,7 +42,7 @@ public class UserRepositoryImp implements IRepository<User>{
 	@Override
 	public void insert(User user) {
 		// TODO Auto-generated method stub
-		String insertuser = "INSERT INTO USUARIOS (DNI,NOMBRE,APELLIDO,USERNAME,PASSWORD) values(?,?,?,?,?) ";
+		String insertuser = "INSERT INTO USUARIOS (DNI,NOMBRE,APELLIDO,USERNAME,PASS) values(?,?,?,?,?) ";
 		Connection con = DbConection.getConection();
 		try {
 			PreparedStatement ps = con.prepareStatement(insertuser);
