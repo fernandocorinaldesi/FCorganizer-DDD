@@ -1,4 +1,4 @@
-package ar.com.unpaz.organizerddd.domain.repositorycontracts;
+package ar.com.unpaz.organizerddd.domain.specifications;
 
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 

@@ -1,4 +1,4 @@
-package ar.com.unpaz.organizerddd.domain.repositorycontracts;
+package ar.com.unpaz.organizerddd.domain.specifications;
 
 public interface Specification<T> {
 

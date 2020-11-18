@@ -9,7 +9,7 @@ import java.util.List;
 
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
-import ar.com.unpaz.organizerddd.domain.repositorycontracts.Specification;
+import ar.com.unpaz.organizerddd.domain.specifications.Specification;
 
 public class PasswordRepositoryImp implements IRepository<Password> {
 
@@ -67,13 +67,15 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 
 	@Override
 	public List<Password> query(Specification<Password> spec) {
-		return null;
-		// TODO Auto-generated method stub
-		
+		 List<Password> current = get();
+		 List<Password> result = new ArrayList<Password>(); 
+		    for (Password e : current) {
+		      if (spec.specified(e)) {
+		        result.add(e);
+		      }
+		    }
+		    return result;
 		
 	}
-
-	
-
 
 }

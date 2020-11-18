@@ -3,6 +3,8 @@ package ar.com.unpaz.organizerddd.domain.repositorycontracts;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.com.unpaz.organizerddd.domain.specifications.Specification;
+
 
 public abstract class AbstractInMemoryRepository <E> implements IRepository<E>{
 	  @Override

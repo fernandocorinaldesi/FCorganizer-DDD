@@ -9,7 +9,7 @@ import java.util.List;
 
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
-import ar.com.unpaz.organizerddd.domain.repositorycontracts.Specification;
+import ar.com.unpaz.organizerddd.domain.specifications.Specification;
 
 public class UserRepositoryImp implements IRepository<User>{
 
