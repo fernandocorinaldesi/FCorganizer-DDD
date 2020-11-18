@@ -5,9 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
-import ar.com.unpaz.organizerddd.application.AppServicePass;
-import ar.com.unpaz.organizerddd.application.AppServiceUser;
-import ar.com.unpaz.organizerddd.application.AppServices;
+import ar.com.unpaz.organizerddd.application.services.AppServicePass;
+import ar.com.unpaz.organizerddd.application.services.AppServiceUser;
+import ar.com.unpaz.organizerddd.application.services.AppServices;
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;

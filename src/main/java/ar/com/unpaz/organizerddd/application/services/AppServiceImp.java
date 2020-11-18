@@ -1,4 +1,4 @@
-package ar.com.unpaz.organizerddd.application;
+package ar.com.unpaz.organizerddd.application.services;
 
 import java.util.List;
 
