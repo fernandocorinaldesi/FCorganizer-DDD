@@ -11,6 +11,7 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 	protected AppServices<E> appservice;
 	protected MainViewOperations<E> mainview;
 	protected IValidator<E> frontValidator;
+	protected int dni;
 
 	public ViewAbstractController(AppServices<E> appservice, MainViewOperations<E> mainview,
 		IValidator<E> frontValidator) {
@@ -78,6 +79,15 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 	public void setLogOut(LoginController loginController) {
 		mainview.setLogOut(loginController);
 		
+	}
+	@Override
+	public void setDefault(int dni) {
+		this.dni=dni;
+	}
+	
+	@Override
+	public int getDefault() {
+		return dni;
 	}
 	
 	public abstract void injectControllerInView();

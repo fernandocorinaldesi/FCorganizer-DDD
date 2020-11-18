@@ -14,5 +14,7 @@ public interface IController <E>{
 	public void startView();
 	public List<String> getErrors();
 	public void setLogOut(LoginController loginController);
+	public void setDefault(int dni);
+	public int getDefault();
 	
 }

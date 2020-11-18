@@ -9,24 +9,18 @@ import ar.com.unpaz.organizerddd.locator.Context;
 
 public abstract class AppServiceImp<E> implements AppServices<E>{
 	
-	private IRepository<E> passwordrepository;
+	protected IRepository<E> repository;
 	private IDomainServices<E> domainservices;
-	
-	public AppServiceImp(IRepository<E> passwordrepository, IDomainServices<E> domainservices){
-		this.passwordrepository=passwordrepository;
+		
+	public AppServiceImp(IRepository<E> repository, IDomainServices<E> domainservices){
+		this.repository=repository;
 		this.domainservices=domainservices;
 	}
 
 	@Override
-	public List<E> getList() {
-		// TODO Auto-generated method stub
-		return passwordrepository.get();
-	}
-	
-	@Override
 	public void delEntity(int pswId) {
 		// TODO Auto-generated method stub
-		passwordrepository.delete(pswId);
+		repository.delete(pswId);
 	}
 
 	@Override
@@ -41,16 +35,16 @@ public abstract class AppServiceImp<E> implements AppServices<E>{
 		return false;
 		}
 		else
-		passwordrepository.insert(pass);
+		repository.insert(pass);
 		return true;	
 
 	}
 
 	@Override
-	public boolean existEntity(List<E> passlist,E psw) {
+	public boolean existEntity(List<E> list,E entity) {
 		// TODO Auto-generated method stub
-		for(E pass : passlist) {
-			if(pass.equals(psw))
+		for(E e : list) {
+			if(e.equals(entity))
 				return true;
 		}
 		return false;

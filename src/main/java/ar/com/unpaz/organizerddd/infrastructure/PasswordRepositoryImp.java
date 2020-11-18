@@ -39,13 +39,14 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 
 	@Override
 	public void insert(Password psw) {
-		String insertpass = "INSERT INTO PASSWORDS (SITIO,USUARIO,PASSWORD) values(?,?,?) ";
+		String insertpass = "INSERT INTO PASSWORDS (SITIO,USUARIO,PASSWORD,USUARIODNI) values(?,?,?,?) ";
 		Connection con = DbConection.getConection();
 		try {
 			PreparedStatement ps = con.prepareStatement(insertpass);
 			ps.setString(1, psw.getSite());
 			ps.setString(2, psw.getUser());
 			ps.setString(3, psw.getPass());
+			ps.setInt(4, psw.getDni());
 			ps.executeUpdate();
 		
 		} catch (SQLException ex) {
@@ -74,8 +75,7 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 		        result.add(e);
 		      }
 		    }
-		    return result;
-		
+		 return result;
 	}
 
 }

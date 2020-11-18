@@ -15,10 +15,11 @@ public class Password extends Entity<Password> {
 		this.site=site;
 		this.dni=dni;
 	}
-	public Password(String site,String user,String pass) {
+	public Password(String site,String user,String pass,int dni) {
 		this.pass=pass;
 		this.user=user;
 		this.site=site;
+		this.dni=dni;
 	}
 	
 	public int getPassId() {

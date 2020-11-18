@@ -58,50 +58,52 @@ public class EntryPoint
 		}
 		EventQueue.invokeLater(() -> {
 			
-	            /////////COMPOSITE ROOT///////
+            /////////COMPOSITE ROOT///////
 			 
-			    
-				//PESISTENCE INFRAESTRUCTURE
-				IRepository<Password> passwordrepository=new PasswordRepositoryImp();
-				IRepository<User> userrepository=new UserRepositoryImp();
-				
-				//DOMAIN
-				//Domainservices
-				IDomainServices<Password> passdomainservices=new DomainPasswordServices();
-				IDomainServices<User> userdomainservices=new DomainUserService();
-				
-				//APPLICATION
-				AppServices<Password> appservicepass=new AppServicePass(passwordrepository,passdomainservices);
-				AppServices<User> appserviceuser=new AppServiceUser(userrepository,userdomainservices);
-		    	
-				
-		    	//PRESENTACION
-				
-				//Front validator
-				IValidator<Password> passfrontValidator=new PasswordFrontValidator();
-				IValidator<User> userfrontValidator=new UserFrontValidator();
-				
-				//main view
-				MainViewOperations<Password> mainview=new MainView();
-				MainViewOperations<User> adminview=new AdminView();
-				
-				//view controller
-				IController<Password> viewpasscontroller=new ViewPasswordController(appservicepass,mainview,passfrontValidator);
-				IController<User> viewadmincontroller=new ViewAdminController(appserviceuser,adminview,userfrontValidator);
-				
-				//selector de modulo(usuarios o admin)
-				Selector selector=new SelectorImp(viewpasscontroller,
-						                          viewadmincontroller);
-				
-				LoginViewOperations loginview=new LoginView();
-				
-				//TRANSVERSAL INFRAESTRUCTURE
-				LoginController logincontroller=new LoginControllerImp(
-						loginview,
-						selector);
-				
-				
-				logincontroller.startView();
+		    
+			//PESISTENCE INFRAESTRUCTURE
+			IRepository<Password> passwordrepository=new PasswordRepositoryImp();
+			IRepository<User> userrepository=new UserRepositoryImp();
+			
+			//DOMAIN
+			//Domainservices
+			IDomainServices<Password> passdomainservices=new DomainPasswordServices();
+			IDomainServices<User> userdomainservices=new DomainUserService();
+			
+			//APPLICATION
+			AppServices<Password> appservicepass=new AppServicePass(passwordrepository,passdomainservices);
+			AppServices<User> appserviceuser=new AppServiceUser(userrepository,userdomainservices);
+	    	
+			
+	    	//PRESENTACION
+			
+			//Front validator
+			IValidator<Password> passfrontValidator=new PasswordFrontValidator();
+			IValidator<User> userfrontValidator=new UserFrontValidator();
+			
+			//main view
+			MainViewOperations<Password> mainview=new MainView();
+			MainViewOperations<User> adminview=new AdminView();
+			
+			//view controller
+			IController<Password> viewpasscontroller=new ViewPasswordController(appservicepass,mainview,passfrontValidator);
+			IController<User> viewadmincontroller=new ViewAdminController(appserviceuser,adminview,userfrontValidator);
+			
+			//selector de vista(usuarios o admin)
+			Selector selector=new SelectorImp(viewpasscontroller,
+					                          viewadmincontroller,
+					                          appserviceuser,
+					                          appservicepass);
+			
+			LoginViewOperations loginview=new LoginView();
+			
+			//TRANSVERSAL INFRAESTRUCTURE
+			LoginController logincontroller=new LoginControllerImp(
+					loginview,
+					selector);
+			
+			
+			logincontroller.startView();
 					
 		});
     	

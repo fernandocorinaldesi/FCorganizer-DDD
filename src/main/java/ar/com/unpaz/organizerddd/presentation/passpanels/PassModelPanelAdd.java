@@ -60,7 +60,7 @@ public class PassModelPanelAdd extends PassModelPanel {
 		String site = getSite();
 		String user = getUser();
 		String pass = getPass();
-		return new Password(site, user, pass);
+		return new Password(site, user, pass,controller.getDefault());
 	}
 
 }
