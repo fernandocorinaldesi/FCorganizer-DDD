@@ -55,11 +55,11 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 	}
 
 	@Override
-	public void delete(int pswId) {
+	public void delete(Password pswId) {
 		String deletepass = "DELETE FROM PASSWORDS WHERE ID=?";
 		Connection con = DbConection.getConection();
 		try (PreparedStatement st = con.prepareStatement(deletepass)) {
-			st.setInt(1,pswId);
+			st.setInt(1,pswId.getPassId());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

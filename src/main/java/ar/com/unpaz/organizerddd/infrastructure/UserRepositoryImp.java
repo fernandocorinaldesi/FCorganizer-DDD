@@ -42,6 +42,7 @@ public class UserRepositoryImp implements IRepository<User>{
 	@Override
 	public void insert(User user) {
 		// TODO Auto-generated method stub
+		System.out.println(user+"pase por aki repository");
 		String insertuser = "INSERT INTO USUARIOS (DNI,NOMBRE,APELLIDO,USERNAME,PASS) values(?,?,?,?,?) ";
 		Connection con = DbConection.getConection();
 		try {
@@ -60,12 +61,12 @@ public class UserRepositoryImp implements IRepository<User>{
 	}
 
 	@Override
-	public void delete(int dni) {
+	public void delete(User user) {
 		// TODO Auto-generated method stub
 		String deleteuser = "DELETE FROM USUARIOS WHERE DNI=?";
 		Connection con = DbConection.getConection();
 		try (PreparedStatement st = con.prepareStatement(deleteuser)) {
-			st.setInt(1,dni);
+			st.setInt(1,user.getDni());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
