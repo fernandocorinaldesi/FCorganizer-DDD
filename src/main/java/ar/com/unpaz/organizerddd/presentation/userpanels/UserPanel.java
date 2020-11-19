@@ -30,6 +30,7 @@ public class UserPanel extends JPanel {
 	private JButton del;
 	private JButton mod;
 	private IController<User> controller;
+	private UserDialog userdiag;
 
 
 	public UserPanel() {
@@ -101,12 +102,14 @@ public class UserPanel extends JPanel {
 		return pane;
 	}
 	private void initDialogs(){
-		//vehicleregdialog=new VehicleRegDialog();
+		userdiag=new UserDialog();
+		
 	}
 
 	private void initListeners() {
 		reg.addActionListener((event) -> {
-			System.out.println("abrir agregar");
+			
+			userdiag.setVisible(true);
 		});
 		mod.addActionListener((event) -> {
 
@@ -120,6 +123,7 @@ public class UserPanel extends JPanel {
 	public void setController(IController<User> controller) {
 		// TODO Auto-generated method stub
 		this.controller=controller;
+		userdiag.setDialogController(controller);
 	}
 
 	public void loadUserList() {
