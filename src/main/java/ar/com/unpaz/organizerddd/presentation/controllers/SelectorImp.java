@@ -5,6 +5,7 @@ import ar.com.unpaz.organizerddd.application.services.AppServicePass;
 import ar.com.unpaz.organizerddd.application.services.AppServices;
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
+import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
 
 public class SelectorImp implements Selector{
@@ -37,8 +38,13 @@ public class SelectorImp implements Selector{
 	    ((AppServicePass)appservicepass).setUser(user);
 		mainview.load();
 		mainview.startView();
+		if(Context.INMEMORY) {
+			mainview.showWarningInMemMsg();
+		}
+		
 		mainview.setLogOut(loginController);
 		mainview.setDefault(user.getDni());
+		
 	}
 
 	@Override
@@ -46,6 +52,9 @@ public class SelectorImp implements Selector{
 		// TODO Auto-generated method stub
 		adminview.load();
 		adminview.startView();
+		if(Context.INMEMORY) {
+			mainview.showWarningInMemMsg();
+		}
 		adminview.setLogOut(loginController);
 	}
 
