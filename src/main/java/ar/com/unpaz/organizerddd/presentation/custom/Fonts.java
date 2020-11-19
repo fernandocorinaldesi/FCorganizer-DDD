@@ -7,5 +7,6 @@ public class Fonts {
 	public static  Font E = new Font("Serif", Font.BOLD,12);
 	public static  Font SIDEPANEL = new Font("Serif", Font.BOLD,16);
 	public static Font BTN = new Font("Serif", Font.BOLD, 20);
+	public static Font BTNDIALOG = new Font("Serif", Font.BOLD, 16);
 
 }
