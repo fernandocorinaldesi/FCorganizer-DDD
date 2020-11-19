@@ -26,7 +26,7 @@ public class MyDialogBar extends JLabel{
 
 	public MyDialogBar(JDialog mainFrame,String option) {
 		this.mainFrame = mainFrame;
-	    setText("NUEVA NOTA");
+	    setText(option);
 	    setPreferredSize(new Dimension(300,40));
 		setHorizontalAlignment(JLabel.CENTER);
 		setForeground(Color.WHITE);
