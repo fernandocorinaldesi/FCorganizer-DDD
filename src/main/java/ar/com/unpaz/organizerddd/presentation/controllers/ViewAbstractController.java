@@ -3,6 +3,7 @@ package ar.com.unpaz.organizerddd.presentation.controllers;
 import java.util.List;
 
 import ar.com.unpaz.organizerddd.application.services.AppServices;
+import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.mainview.MainViewOperations;
 import ar.com.unpaz.organizerddd.presentation.validator.IValidator;
 import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
@@ -37,9 +38,9 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 	}
 
 	@Override
-	public void delete(int pswId) {
+	public void delete(E entity) {
 		// TODO Auto-generated method stub
-		appservice.delEntity(pswId);
+		appservice.delEntity(entity);
 
 	}
 
@@ -54,6 +55,11 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 	public List<String> getErrors() {
 		// TODO Auto-generated method stub
 		return frontValidator.getErrorMsg();
+	}
+	public void showWarningInMemMsg() {
+		
+		mainview.showInMemWarning();
+		
 	}
 
 	@Override

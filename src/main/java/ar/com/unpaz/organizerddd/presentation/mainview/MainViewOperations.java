@@ -9,4 +9,5 @@ public interface MainViewOperations<E> {
 	public void setLogOut(LoginController login);
 	public void load();
 	public void update();
+	public void showInMemWarning();
 }

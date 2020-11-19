@@ -20,6 +20,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
@@ -110,6 +111,11 @@ public abstract class AbstractMainView<E> extends JFrame implements MainViewOper
             }
         });
 		
+	}
+	public void showInMemWarning() {
+		 JOptionPane.showMessageDialog(this, "Esta aplicacion se esta ejecutando en modo en memoria. Este modo esta pensando para realizar test, por lo tanto los cambios no seran guardados", "Cuidado",
+			        JOptionPane.WARNING_MESSAGE);
+			  
 	}
 	private BufferedImage loadIconImage() {
 		BufferedImage image = null;

@@ -11,11 +11,14 @@ import ar.com.unpaz.organizerddd.application.services.AppServices;
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
+import ar.com.unpaz.organizerddd.domain.repositorycontracts.InMemoryPasswordRepository;
+import ar.com.unpaz.organizerddd.domain.repositorycontracts.InMemoryUserRepository;
 import ar.com.unpaz.organizerddd.domain.services.DomainPasswordServices;
 import ar.com.unpaz.organizerddd.domain.services.DomainUserService;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
 import ar.com.unpaz.organizerddd.infrastructure.PasswordRepositoryImp;
 import ar.com.unpaz.organizerddd.infrastructure.UserRepositoryImp;
+import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.controllers.Selector;
 import ar.com.unpaz.organizerddd.presentation.controllers.SelectorImp;
@@ -62,8 +65,17 @@ public class EntryPoint
 			 
 		    
 			//PESISTENCE INFRAESTRUCTURE
-			IRepository<Password> passwordrepository=new PasswordRepositoryImp();
-			IRepository<User> userrepository=new UserRepositoryImp();
+			//IRepository<Password> passwordrepository=new PasswordRepositoryImp();
+			//IRepository<User> userrepository=new UserRepositoryImp();
+			
+			//Inmemory repository : para utilizarlo descomentarlo y comentar el de arriba
+			IRepository<Password> passwordrepository=new InMemoryPasswordRepository();
+			IRepository<User> userrepository=new InMemoryUserRepository();
+			
+			if(userrepository instanceof InMemoryUserRepository 
+			   && passwordrepository instanceof InMemoryPasswordRepository) {
+				Context.INMEMORY=true;
+			}
 			
 			//DOMAIN
 			//Domainservices
