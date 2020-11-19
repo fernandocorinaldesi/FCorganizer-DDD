@@ -23,6 +23,7 @@ public abstract class PassModelPanel extends JXPanel {
 	protected JTextField site;
 	protected PassPanel passpanel;
 	protected IController<Password> controller;
+	private int dni;
 
 	public PassModelPanel() {
 		setLayout(new FlowLayout());
@@ -125,6 +126,15 @@ public abstract class PassModelPanel extends JXPanel {
 	public void setController(IController<Password> controller) {
 	   this.controller=controller;
 		
+	}
+
+	public Password getPassword() {
+		return new Password(getPassId(),getSite(),getUser(),getPass(),dni);
+	}
+
+	public void setDni(int dni) {
+		// TODO Auto-generated method stub
+		this.dni=dni;
 	}
 
 	

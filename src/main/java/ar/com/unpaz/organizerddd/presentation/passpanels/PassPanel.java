@@ -85,6 +85,7 @@ public class PassPanel extends JPanel {
 			passmodelpanel.setUser(pass.getUser());
 			passmodelpanel.setPass(pass.getPass());
 			passmodelpanel.setSite(pass.getSite());
+			passmodelpanel.setDni(pass.getDni());
 			innerPanel.add(passmodelpanel);
 			
 			}

@@ -45,7 +45,7 @@ public class PassModelPanelList extends PassModelPanel{
 		
 	}
 	private void deletePass() {
-		passpanel.getController().delete(getPassId());
+		passpanel.getController().delete(getPassword());
 		passpanel.removeComponent(this);
 		passpanel.update();
 	}

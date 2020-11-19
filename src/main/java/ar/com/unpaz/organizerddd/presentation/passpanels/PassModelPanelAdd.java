@@ -42,11 +42,13 @@ public class PassModelPanelAdd extends PassModelPanel {
 	}
 
 	private void showFrontErrorMsg(List<String> list) {
+		String to_print = "";
 		for (int i = 0; i < list.size(); i++) {
 			if (!list.get(i).isEmpty()) {
-				JOptionPane.showMessageDialog(null, list.get(i), "Error", JOptionPane.ERROR_MESSAGE);
+				to_print+=list.get(i)+"\n";
 			}
 		}
+		JOptionPane.showMessageDialog(null,to_print, "Se encontraron los siguientes errores", JOptionPane.ERROR_MESSAGE);
 	}
 
 	@Override
