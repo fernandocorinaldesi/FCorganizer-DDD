@@ -50,5 +50,4 @@ SET SCHEMA PUBLIC
 INSERT INTO PASSWORDS VALUES(1,'www.google.com','fer','fer123456',30038420)
 INSERT INTO PASSWORDS VALUES(2,'www.facebook.com','ferfer','ferferfer',30038420)
 INSERT INTO PASSWORDS VALUES(3,'asdasdasdasd','asdasdasda','asdasdasdsa',30038420)
-INSERT INTO PASSWORDS VALUES(4,'asdasdasdas','asdasdasdsa','asdasdsadsa',30038420)
 INSERT INTO USUARIOS VALUES(30038420,'fernando','corinaldesi','fernando','fer123456')
