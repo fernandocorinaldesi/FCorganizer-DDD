@@ -7,4 +7,6 @@ public class Context {
   
    //aplication errors msgs
    public static String APPERRORS="";
+   //other variables
+   public static boolean INMEMORY=false;
 }
