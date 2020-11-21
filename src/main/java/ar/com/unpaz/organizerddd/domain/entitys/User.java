@@ -5,6 +5,7 @@ public class User extends Entity<User>{
 	String user;
 	String name;
 	String secondName;
+	String strdni;
 	int dni;
 	public User(int dni,String name,String secondName,String user,String pass) {
 		this.dni=dni;
@@ -12,6 +13,19 @@ public class User extends Entity<User>{
 		this.user=user;
 		this.name=name;
 		this.secondName=secondName;
+	}
+	public User(String strdni,String name,String secondName,String user,String pass) {
+		this.strdni=strdni;
+		this.pass=pass;
+		this.user=user;
+		this.name=name;
+		this.secondName=secondName;
+	}
+	public String getStrdni() {
+		return strdni;
+	}
+	public void setStrdni(String strdni) {
+		this.strdni = strdni;
 	}
 	public String getPass() {
 		return pass;
@@ -57,15 +71,15 @@ public class User extends Entity<User>{
 	}
 	public boolean emptyDniVal() {
 		// TODO Auto-generated method stub
-		return (String.valueOf(this.dni).isEmpty());
+		return (this.strdni.isEmpty());
 	}
 	public boolean MinDniVal() {
 		// TODO Auto-generated method stub
-		return (String.valueOf(this.dni).length()<6);
+		return (this.strdni.length()<6);
 	}
 	public boolean MaxDniVal() {
 		// TODO Auto-generated method stub
-		return (String.valueOf(this.dni).length()>9);
+		return (this.strdni.length()>9);
 	}
 	public boolean emptyNameVal() {
 		// TODO Auto-generated method stub
@@ -73,11 +87,11 @@ public class User extends Entity<User>{
 	}
 	public boolean MinNameVal() {
 		// TODO Auto-generated method stub
-		return(this.pass.length()<3);
+		return(this.name.length()<3);
 	}
 	public boolean MaxNameVal() {
 		// TODO Auto-generated method stub
-		return(this.pass.length()>31);
+		return(this.name.length()>31);
 	}
 	public boolean emptysecondNameVal() {
 		// TODO Auto-generated method stub
@@ -85,11 +99,11 @@ public class User extends Entity<User>{
 	}
 	public boolean MinsecondNameVal() {
 		// TODO Auto-generated method stub
-		return(this.pass.length()<2);
+		return(this.secondName.length()<2);
 	}
 	public boolean MaxsecondNameVal() {
 		// TODO Auto-generated method stub
-		return(this.pass.length()>31);
+		return(this.secondName.length()>31);
 	}
 	public boolean emptyPassVal() {
 		// TODO Auto-generated method stub

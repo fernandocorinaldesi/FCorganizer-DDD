@@ -59,7 +59,7 @@ public class UserDialog extends JDialog {
 		// TODO Auto-generated method stub
 		accept.addActionListener((event) -> {
 			if (controller.validate(createUser())) {
-				if (controller.register(createUser())) {
+				if (controller.register(sendUser())) {
 					clearFields();
 					dispose();
 					JOptionPane.showMessageDialog (null, "El usuario fue creado correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
@@ -85,6 +85,14 @@ public class UserDialog extends JDialog {
 		JOptionPane.showMessageDialog(this,to_print, "Se encontraron los siguientes errores", JOptionPane.ERROR_MESSAGE);
 	}
 	private User createUser() {
+		String name =nameField.getText();
+		String secondName =secondNameField.getText();
+		String user = userField.getText();
+		String pass =passField.getText();
+		String dni =dniField.getText();
+		return new User(dni,name,secondName,user,pass);
+	}
+	private User sendUser() {
 		String name =nameField.getText();
 		String secondName =secondNameField.getText();
 		String user = userField.getText();
