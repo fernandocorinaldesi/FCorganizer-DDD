@@ -7,7 +7,7 @@
 - [Empezando](#Empezando)
   - [Requerimientos](#Requerimientos)
   - [Dependencias](#Dependencias)
-  - [Diseño](#Diseño)
+  - [Diseño](#Diseño)  
   - [Screenshot](#Screenshot)
   - [Contacto](#Contacto)
   - [Licencia](#Licencia)
@@ -47,6 +47,12 @@ Presentacion | en construccion | en construccion
 Aplicacion | en construccion | en construccion
 Dominio | en construccion | en construccion  
 Infraestructura | en construccion | en construccion  
+
+Diagramas de clases  
+
+![screenshoot](https://i.ibb.co/BcvSrQd/repository-spec-inmem.jpg)
+![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)
+![screenshoot](https://i.ibb.co/tctTg6C/validator.jpg) 
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)
