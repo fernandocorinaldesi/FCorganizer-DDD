@@ -5,7 +5,6 @@ import static javax.swing.border.TitledBorder.TOP;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.List;

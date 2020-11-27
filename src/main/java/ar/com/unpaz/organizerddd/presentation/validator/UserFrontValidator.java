@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 
 public class UserFrontValidator extends Validator<User> {
-	String c = "campo invalido";
-
+	
 	@Override
 	public void executeValidations(User user) {
 		// TODO Auto-generated method stub

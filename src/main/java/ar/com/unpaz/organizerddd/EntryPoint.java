@@ -16,8 +16,6 @@ import ar.com.unpaz.organizerddd.domain.repositorycontracts.InMemoryUserReposito
 import ar.com.unpaz.organizerddd.domain.services.DomainPasswordServices;
 import ar.com.unpaz.organizerddd.domain.services.DomainUserService;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
-import ar.com.unpaz.organizerddd.infrastructure.PasswordRepositoryImp;
-import ar.com.unpaz.organizerddd.infrastructure.UserRepositoryImp;
 import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.controllers.Selector;

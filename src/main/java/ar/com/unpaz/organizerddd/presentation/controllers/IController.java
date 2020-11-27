@@ -2,7 +2,6 @@ package ar.com.unpaz.organizerddd.presentation.controllers;
 
 import java.util.List;
 
-import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
 
 public interface IController <E>{

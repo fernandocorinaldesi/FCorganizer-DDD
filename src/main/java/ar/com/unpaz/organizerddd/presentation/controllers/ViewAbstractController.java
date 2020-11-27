@@ -3,7 +3,6 @@ package ar.com.unpaz.organizerddd.presentation.controllers;
 import java.util.List;
 
 import ar.com.unpaz.organizerddd.application.services.AppServices;
-import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.mainview.MainViewOperations;
 import ar.com.unpaz.organizerddd.presentation.validator.IValidator;
 import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
