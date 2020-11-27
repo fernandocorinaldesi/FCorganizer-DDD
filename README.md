@@ -7,23 +7,28 @@
 - [Empezando](#Empezando)
   - [Requerimientos](#Requerimientos)
   - [Dependencias](#Dependencias)
-  - [Diseño](#Diseño)
+  - [Diseño](#Diseño)  
   - [Screenshot](#Screenshot)
   - [Contacto](#Contacto)
   - [Licencia](#Licencia)
  
 
 ### Empezando
-La idea de este repo es que sea una primera practica en DDD, para ello se desarrollo una simple aplicacion que guarda contraseñas, con datos de usuario,password y sitio, similar al que utiliza chrome
+La idea de este repo es que sea una primera practica en DDD, para ello se desarrollo una simple aplicacion que guarda contraseñas, con datos de usuario,password y sitio, similar al que utiliza chrome, con la capacidad de crear multiples usuarios.
 
-Funciones disponibles api:
+Funciones disponibles :
 * Operaciones crud
 
-Detalles de la App:  
+Detalles generales y de diseño de la App:  
 * Se utilizo swing para programar la capa de presentación junto con algunas clases custom para lograr ciertos efectos como hover
 * Para la base de datos se utilizo hyper-sql en modo portable, es decir esta integrada en este repositorio
 * Tiene la funcionalidad de maximizarse a pantalla completa
 * Tiene la funcionalidad de minimización al tray
+* Se implemento un repositorio en memoria, para facilitar los tests
+* Se implemento specification
+* Capacidad para multiusuarios con ventana de login
+
+
 
 ### Requerimientos 
 
@@ -42,6 +47,12 @@ Presentacion | en construccion | en construccion
 Aplicacion | en construccion | en construccion
 Dominio | en construccion | en construccion  
 Infraestructura | en construccion | en construccion  
+
+Diagramas de clases  
+
+![screenshoot](https://i.ibb.co/BcvSrQd/repository-spec-inmem.jpg)
+![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)
+![screenshoot](https://i.ibb.co/tctTg6C/validator.jpg) 
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)
