@@ -18,9 +18,9 @@ public abstract class AppServiceImp<E> implements AppServices<E>{
 	}
 
 	@Override
-	public void delEntity(int pswId) {
+	public void delEntity(E entity) {
 		// TODO Auto-generated method stub
-		repository.delete(pswId);
+		repository.delete(entity);
 	}
 
 	@Override
