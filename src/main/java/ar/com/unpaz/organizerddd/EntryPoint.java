@@ -63,10 +63,6 @@ public class EntryPoint
 			 
 		    
 			//PESISTENCE INFRAESTRUCTURE
-			//IRepository<Password> passwordrepository=new PasswordRepositoryImp();
-			//IRepository<User> userrepository=new UserRepositoryImp();
-			
-			//Inmemory repository : para utilizarlo descomentarlo y comentar el de arriba
 			IRepository<Password> passwordrepository=new InMemoryPasswordRepository();
 			IRepository<User> userrepository=new InMemoryUserRepository();
 			
