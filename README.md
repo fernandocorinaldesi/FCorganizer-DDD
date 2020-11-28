@@ -47,7 +47,8 @@ Layer     | Type   | Descripcion
 Presentacion | en construccion | en construccion
 Aplicacion | en construccion | en construccion
 Dominio | en construccion | en construccion  
-Infraestructura | en construccion | en construccion  
+Infraestructura de persistencia| en construccion | en construccion  
+Infraestructura transversal| en construccion | en construccion 
 
 Diagramas de clases  
 
