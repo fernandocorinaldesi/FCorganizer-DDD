@@ -52,7 +52,7 @@ Diagramas de clases
 
 ![screenshoot](https://i.ibb.co/BcvSrQd/repository-spec-inmem.jpg)
 ![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)
-![screenshoot](https://i.ibb.co/tctTg6C/validator.jpg) 
+![screenshoot](https://i.ibb.co/Gsc9Sbk/Transversal-validator.jpg) 
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)
