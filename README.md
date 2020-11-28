@@ -9,6 +9,7 @@
   - [Dependencias](#Dependencias)
   - [Diseño](#Diseño)  
   - [Screenshot](#Screenshot)
+  - [Despliegue](#Despliegue)
   - [Contacto](#Contacto)
   - [Licencia](#Licencia)
  
@@ -55,7 +56,9 @@ Diagramas de clases
 ![screenshoot](https://i.ibb.co/Gsc9Sbk/Transversal-validator.jpg) 
 
 ### Screenshot
-![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)
+![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
+
+### Despliegue
 
 ### Contacto
 
