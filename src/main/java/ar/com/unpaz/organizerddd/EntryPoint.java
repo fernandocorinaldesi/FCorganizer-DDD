@@ -37,17 +37,17 @@ import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginControllerImp;
  * Hello world!
  *
  */
-public class EntryPoint 
-{
-    public static  void main( String[] args )
-    {
-        /*IMPLEMENTACION SERVICE LOCATOR DINAMICO
-    	    	    	
-    	Iservice service=new ServiceLocator();
-    	Iservice serviceTest=new ServiceLocator();
-    	*////
-    	
-       	try {
+public class EntryPoint {
+	public static void main(String[] args) {
+		/*
+		 * IMPLEMENTACION SERVICE LOCATOR DINAMICO
+		 * 
+		 * Iservice service=new ServiceLocator(); Iservice serviceTest=new
+		 * ServiceLocator();
+		 */
+		///
+
+		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
 					UIManager.setLookAndFeel(info.getClassName());
@@ -58,69 +58,60 @@ public class EntryPoint
 			System.out.println(e);
 		}
 		EventQueue.invokeLater(() -> {
-			
-            /////////COMPOSITE ROOT///////
-			 
-		    
-			//PESISTENCE INFRAESTRUCTURE
+
+			///////// COMPOSITE ROOT///////
+
+			// PESISTENCE INFRAESTRUCTURE
 			IRepository<Password> passwordrepository=new InMemoryPasswordRepository();
 			IRepository<User> userrepository=new InMemoryUserRepository();
+
 			
-			if(userrepository instanceof InMemoryUserRepository 
-			   && passwordrepository instanceof InMemoryPasswordRepository) {
-				Context.INMEMORY=true;
+
+			if (userrepository instanceof InMemoryUserRepository
+					&& passwordrepository instanceof InMemoryPasswordRepository) {
+				Context.INMEMORY = true;
 			}
-			
-			//DOMAIN
-			//Domainservices
-			IDomainServices<Password> passdomainservices=new DomainPasswordServices();
-			IDomainServices<User> userdomainservices=new DomainUserService();
-			
-			//APPLICATION
-			AppServices<Password> appservicepass=new AppServicePass(passwordrepository,passdomainservices);
-			AppServices<User> appserviceuser=new AppServiceUser(userrepository,userdomainservices);
-	    	
-			
-	    	//PRESENTACION
-			
-			//Front validator
-			IValidator<Password> passfrontValidator=new PasswordFrontValidator();
-			IValidator<User> userfrontValidator=new UserFrontValidator();
-			
-			//main view
+
+			// DOMAIN
+			// Domainservices
+			IDomainServices<Password> passdomainservices = new DomainPasswordServices();
+			IDomainServices<User> userdomainservices = new DomainUserService();
+
+			// APPLICATION
+			AppServices<Password> appservicepass = new AppServicePass(passwordrepository, passdomainservices);
+			AppServices<User> appserviceuser = new AppServiceUser(userrepository, userdomainservices);
+
+			// PRESENTACION
+
+			// Front validator
+			IValidator<Password> passfrontValidator = new PasswordFrontValidator();
+			IValidator<User> userfrontValidator = new UserFrontValidator();
+
+			// main view
 			MainViewOperations<Password> mainview=new MainView();
 			MainViewOperations<User> adminview=new AdminView();
+
 			
-			//view controller
-			IController<Password> viewpasscontroller=new ViewPasswordController(appservicepass,mainview,passfrontValidator);
-			IController<User> viewadmincontroller=new ViewAdminController(appserviceuser,adminview,userfrontValidator);
-			
-			//selector de vista(usuarios o admin)
-			Selector selector=new SelectorImp(viewpasscontroller,
-					                          viewadmincontroller,
-					                          appserviceuser,
-					                          appservicepass);
-			
+
+			// view controller
+			IController<Password> viewpasscontroller = new ViewPasswordController(appservicepass, mainview,
+					passfrontValidator);
+			IController<User> viewadmincontroller = new ViewAdminController(appserviceuser, adminview,
+					userfrontValidator);
+
+			// selector de vista(usuarios o admin)
+			Selector selector = new SelectorImp(viewpasscontroller, viewadmincontroller, appserviceuser,
+					appservicepass);
+
 			LoginViewOperations loginview=new LoginView();
 			
-			//TRANSVERSAL INFRAESTRUCTURE
-			LoginController logincontroller=new LoginControllerImp(
-					loginview,
-					selector);
-			
-			
+
+			// TRANSVERSAL INFRAESTRUCTURE
+			LoginController logincontroller = new LoginControllerImp(loginview, selector);
+
 			logincontroller.startView();
-					
+
 		});
-    	
-    	
-    
-    	
-   
-    	
-    	
-    
-    	
-        
-    }
+
+	}
 }
