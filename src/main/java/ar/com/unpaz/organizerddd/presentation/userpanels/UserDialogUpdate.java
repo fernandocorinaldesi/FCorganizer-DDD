@@ -3,8 +3,8 @@ package ar.com.unpaz.organizerddd.presentation.userpanels;
 import javax.swing.JOptionPane;
 
 import ar.com.unpaz.organizerddd.domain.entitys.User;
-import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class UserDialogUpdate extends UserDialog{
 
@@ -26,7 +26,7 @@ public class UserDialogUpdate extends UserDialog{
 					dispose();
 					JOptionPane.showMessageDialog (this, "El usuario fue modificado correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
 				} else {
-					JOptionPane.showMessageDialog(this, Context.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(this, EnviromentVariables.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			} else {
 				showFrontErrorMsg(controller.getErrors());

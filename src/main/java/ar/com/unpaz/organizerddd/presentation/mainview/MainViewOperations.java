@@ -1,7 +1,7 @@
 package ar.com.unpaz.organizerddd.presentation.mainview;
 
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public interface MainViewOperations<E> {
 	public void setVisible();

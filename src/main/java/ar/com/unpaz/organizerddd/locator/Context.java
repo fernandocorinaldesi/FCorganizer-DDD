@@ -6,7 +6,5 @@ public class Context {
   public static Iservice serviceT;
   
    //aplication errors msgs
-   public static String APPERRORS="";
-   //other variables
-   public static boolean INMEMORY=false;
+  
 }

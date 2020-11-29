@@ -3,7 +3,7 @@ package ar.com.unpaz.organizerddd.presentation.consoleview;
 import java.util.Scanner;
 
 import ar.com.unpaz.organizerddd.presentation.loginview.LoginViewOperations;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public class ConsoleLoginView implements LoginViewOperations {
 

@@ -1,6 +1,6 @@
 package ar.com.unpaz.organizerddd.presentation.loginview;
 
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public interface LoginViewOperations {
       public void startView();

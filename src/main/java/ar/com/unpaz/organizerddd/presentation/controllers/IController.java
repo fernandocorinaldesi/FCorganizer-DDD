@@ -2,7 +2,7 @@ package ar.com.unpaz.organizerddd.presentation.controllers;
 
 import java.util.List;
 
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public interface IController <E>{
 	public List<E> get();

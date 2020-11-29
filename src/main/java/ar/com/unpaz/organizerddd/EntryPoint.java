@@ -30,8 +30,9 @@ import ar.com.unpaz.organizerddd.presentation.mainview.MainViewOperations;
 import ar.com.unpaz.organizerddd.presentation.validator.IValidator;
 import ar.com.unpaz.organizerddd.presentation.validator.PasswordFrontValidator;
 import ar.com.unpaz.organizerddd.presentation.validator.UserFrontValidator;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginControllerImp;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginControllerImp;
 
 /**
  * Hello world!
@@ -69,7 +70,7 @@ public class EntryPoint {
 
 			if (userrepository instanceof InMemoryUserRepository
 					&& passwordrepository instanceof InMemoryPasswordRepository) {
-				Context.INMEMORY = true;
+				EnviromentVariables.INMEMORY = true;
 			}
 
 			// DOMAIN

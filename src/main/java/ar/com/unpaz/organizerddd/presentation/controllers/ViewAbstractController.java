@@ -5,7 +5,7 @@ import java.util.List;
 import ar.com.unpaz.organizerddd.application.services.AppServices;
 import ar.com.unpaz.organizerddd.presentation.mainview.MainViewOperations;
 import ar.com.unpaz.organizerddd.presentation.validator.IValidator;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public abstract class ViewAbstractController<E> implements IController<E>{
 	protected AppServices<E> appservice;

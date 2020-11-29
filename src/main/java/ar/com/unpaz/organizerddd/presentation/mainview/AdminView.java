@@ -11,7 +11,7 @@ import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.custom.SideButton;
 import ar.com.unpaz.organizerddd.presentation.userpanels.UserPanel;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public class AdminView extends AbstractMainView<User> {
 	private static final long serialVersionUID = 1L;

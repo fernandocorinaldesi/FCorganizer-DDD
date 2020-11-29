@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 
 import ar.com.unpaz.organizerddd.presentation.custom.MyTitleBar;
 import ar.com.unpaz.organizerddd.presentation.custom.WindowsSnapper;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 public class LoginView extends JFrame implements LoginViewOperations{
     

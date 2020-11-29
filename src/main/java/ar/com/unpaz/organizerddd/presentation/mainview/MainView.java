@@ -11,7 +11,7 @@ import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.custom.SideButton;
 import ar.com.unpaz.organizerddd.presentation.passpanels.PassPanel;
-import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController;
 
 
 public class MainView extends AbstractMainView<Password> {

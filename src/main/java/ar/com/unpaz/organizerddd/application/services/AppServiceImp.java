@@ -4,7 +4,7 @@ import java.util.List;
 
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
-import ar.com.unpaz.organizerddd.locator.Context;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 
 public abstract class AppServiceImp<E> implements AppServices<E>{
@@ -27,11 +27,11 @@ public abstract class AppServiceImp<E> implements AppServices<E>{
 	public boolean addEntity(E pass) {
 		// TODO Auto-generated method stub
 		if(existEntity(getList(),pass)) {
-		Context.APPERRORS="el registro ya existe en la base de datos";
+        EnviromentVariables.APPERRORS="el registro ya existe en la base de datos";
 		return false;
 		}
 		else if(domainservices.validate(pass)){
-		Context.APPERRORS="campos invalidos";
+		EnviromentVariables.APPERRORS="campos invalidos";
 		return false;
 		}
 		else

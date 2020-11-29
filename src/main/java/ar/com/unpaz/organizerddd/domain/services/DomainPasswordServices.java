@@ -1,9 +1,6 @@
 package ar.com.unpaz.organizerddd.domain.services;
 
-import java.util.List;
-
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
-import ar.com.unpaz.organizerddd.domain.entitys.User;
 
 public class DomainPasswordServices implements IDomainServices<Password>{
 	
@@ -20,13 +17,5 @@ public class DomainPasswordServices implements IDomainServices<Password>{
 			   psw.MaxSiteVal() ||
 			   psw.MaxUserVal();
 	}
-
-
-	@Override
-	public List<Password> filterByUser(List<Password> list,User entity) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
 }

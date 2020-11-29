@@ -3,8 +3,8 @@ package ar.com.unpaz.organizerddd.presentation.userpanels;
 import javax.swing.JOptionPane;
 
 import ar.com.unpaz.organizerddd.domain.entitys.User;
-import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class UserDialogAdd extends UserDialog{
 
@@ -23,7 +23,7 @@ public class UserDialogAdd extends UserDialog{
 					dispose();
 					JOptionPane.showMessageDialog (null, "El usuario fue creado correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
 				} else {
-					JOptionPane.showMessageDialog(null, Context.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, EnviromentVariables.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			} else {
 				showFrontErrorMsg(controller.getErrors());

@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
 import ar.com.unpaz.organizerddd.locator.Context;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class PassModelPanelAdd extends PassModelPanel {
 
@@ -34,7 +35,7 @@ public class PassModelPanelAdd extends PassModelPanel {
 			if (controller.register(getNewPassword())) {
 				clearFields();
 			} else {
-				JOptionPane.showMessageDialog(null, Context.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, EnviromentVariables.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
 			}
 		} else {
 			showFrontErrorMsg(controller.getErrors());
