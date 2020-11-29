@@ -25,7 +25,7 @@ import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.custom.Fonts;
 import ar.com.unpaz.organizerddd.presentation.custom.MyDialogBar;
 
-public class UserDialog extends JDialog {
+public abstract class UserDialog extends JDialog {
 
 	/**
 	 * 
@@ -38,14 +38,14 @@ public class UserDialog extends JDialog {
 	private JLabel dniLabel;
 	private JLabel userNameLabel;
 	private JLabel passLabel;
-	private JTextField nameField;
-	private JTextField secondNameField;
-	private JTextField dniField;
-	private JTextField userField;
-	private JTextField passField;
-	private JButton accept;
-	private JButton cancel;
-	private IController<User> controller;
+	public JTextField nameField;
+	public JTextField secondNameField;
+	public JTextField dniField;
+	public JTextField userField;
+	public JTextField passField;
+	public JButton accept;
+	public JButton cancel;
+	public IController<User> controller;
 
 	public UserDialog() {
 		initConfig();
@@ -53,27 +53,11 @@ public class UserDialog extends JDialog {
 		initlisteners();
 		getRootPane().setBorder(BorderFactory.createLineBorder(new Color(47, 62, 80)));
 	}
-
-	private void initlisteners() {
-		// TODO Auto-generated method stub
-		accept.addActionListener((event) -> {
-			if (controller.validate(createUser())) {
-				if (controller.register(sendUser())) {
-					clearFields();
-					dispose();
-					JOptionPane.showMessageDialog (null, "El usuario fue creado correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
-				} else {
-					JOptionPane.showMessageDialog(null, Context.APPERRORS, "Error", JOptionPane.ERROR_MESSAGE);
-				}
-			} else {
-				showFrontErrorMsg(controller.getErrors());
-			}
-		});
-		cancel.addActionListener((event) -> {
-			dispose();
-		});
-	}
-	private void showFrontErrorMsg(List<String> list) {
+    public abstract void setController(IController<User> controller);
+	
+    public abstract void initlisteners();
+	
+    public void showFrontErrorMsg(List<String> list) {
 		String to_print = "";
 		for (int i = 0; i < list.size(); i++) {
 			if (!list.get(i).isEmpty()) {
@@ -83,23 +67,7 @@ public class UserDialog extends JDialog {
 		}
 		JOptionPane.showMessageDialog(this,to_print, "Se encontraron los siguientes errores", JOptionPane.ERROR_MESSAGE);
 	}
-	private User createUser() {
-		String name =nameField.getText();
-		String secondName =secondNameField.getText();
-		String user = userField.getText();
-		String pass =passField.getText();
-		String dni =dniField.getText();
-		return new User(dni,name,secondName,user,pass);
-	}
-	private User sendUser() {
-		String name =nameField.getText();
-		String secondName =secondNameField.getText();
-		String user = userField.getText();
-		String pass =passField.getText();
-		String dni =dniField.getText();
-		int Dni =dni.isEmpty()?0:Integer.parseInt(dni);
-		return new User(Dni,name,secondName,user,pass);
-	}
+	
 	public void clearFields() {
 		nameField.setText("");
 		secondNameField.setText("");
@@ -123,6 +91,23 @@ public class UserDialog extends JDialog {
 		getContentPane().add(new MyDialogBar(this, "Crear o modificar usuario"), BorderLayout.NORTH);
 		getContentPane().add(createCenter(), BorderLayout.CENTER);
 		getContentPane().add(createSouth(), BorderLayout.SOUTH);
+	}
+	public User createUser() {
+		String name =nameField.getText();
+		String secondName =secondNameField.getText();
+		String user = userField.getText();
+		String pass =passField.getText();
+		String dni =dniField.getText();
+		return new User(dni,name,secondName,user,pass);
+	}
+	public User sendUser() {
+		String name =nameField.getText();
+		String secondName =secondNameField.getText();
+		String user = userField.getText();
+		String pass =passField.getText();
+		String dni =dniField.getText();
+		int Dni =dni.isEmpty()?0:Integer.parseInt(dni);
+		return new User(Dni,name,secondName,user,pass);
 	}
 
 	private JPanel createSouth() {
@@ -191,6 +176,11 @@ public class UserDialog extends JDialog {
 	}
 	public void setDialogController(IController<User> controller) {
 		this.controller=controller;
+	}
+
+	public void setUser(User user) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

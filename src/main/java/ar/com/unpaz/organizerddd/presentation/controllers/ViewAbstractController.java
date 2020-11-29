@@ -35,11 +35,20 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 		return true;
 
 	}
+	@Override
+	public boolean update(E entity) {
+		// TODO Auto-generated method stub
+		if (appservice.updateEntity(entity))
+			updateView();
+		return true;
+
+	}
 
 	@Override
 	public void delete(E entity) {
 		// TODO Auto-generated method stub
 		appservice.delEntity(entity);
+		updateView();
 
 	}
 

@@ -6,7 +6,8 @@ import ar.com.unpaz.organizerddd.transversalinfrastructure.LoginController;
 
 public interface IController <E>{
 	public List<E> get();
-	public boolean register(E psw);
+	public boolean register(E entity);
+	public boolean update(E entity);
 	public boolean validate(E entity);
 	public void delete(E entity);
 	public void load();
