@@ -119,8 +119,7 @@ public class User extends Entity<User>{
 	}
 	@Override
 	public String toString() {
-		return "User [pass=" + pass + ", user=" + user + ", name=" + name + ", secondName=" + secondName + ", dni="
-				+ dni + "]";
+		return "DNI : "+dni+" NOMBRE: "+name+" APELLIDO : "+secondName+" USERNAME : "+user+" PASSWORD : "+pass;
 	}
 	
 

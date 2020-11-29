@@ -115,6 +115,10 @@ public class Password extends Entity<Password> {
 	public void setDni(int dni) {
 		this.dni = dni;
 	}
+	@Override
+	public String toString() {
+		return  "ID: "+passId+" SITIO: "+site+" USUARIO: "+user+" CONTRASEÑA: "+pass;
+	}
 	
 
 }
