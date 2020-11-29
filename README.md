@@ -60,6 +60,17 @@ Diagramas de clases
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
 
 ### Despliegue
+A continuacion se enumeraran y explicaran los pasos para desplegar la aplicacion, para esto se debe generar desde el codigo fuente un archivo.jar ejecutable
+
+#### 1- Descargar el codigo fuente de este repositorio  
+Desde la consola ejecutar el comando git clone https://github.com/fernandocorinaldesi/FCorganizer-DDD.git  
+
+#### 2- Importar el repositorio a eclipse  
+Ejecutar eclipse  y en la pestaña file elegir import,luego en la siguiente ventana seleccionar el directorio donde fue descargado el codigo fuente y apretar finish  
+
+#### 3- Generar el jar ejecutable  
+
+
 
 ### Contacto
 
