@@ -1,4 +1,4 @@
-package ar.com.unpaz.organizerddd.transversalinfrastructure;
+package ar.com.unpaz.organizerddd.transversalinfrastructure.login;
 
 public interface LoginController {
 	 public void startView();

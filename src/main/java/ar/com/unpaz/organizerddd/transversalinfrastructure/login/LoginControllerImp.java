@@ -1,4 +1,4 @@
-package ar.com.unpaz.organizerddd.transversalinfrastructure;
+package ar.com.unpaz.organizerddd.transversalinfrastructure.login;
 
 import ar.com.unpaz.organizerddd.application.dto.Credentials;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
