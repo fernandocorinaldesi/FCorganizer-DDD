@@ -1,12 +1,13 @@
 package ar.com.unpaz.organizerddd.domain.entitys;
 
 public class User extends Entity<User>{
-	String pass;
-	String user;
-	String name;
-	String secondName;
-	String strdni;
-	int dni;
+	private String pass;
+	private String user;
+	private String name;
+	private String secondName;
+	private String strdni;
+	private int dni;
+	
 	public User(int dni,String name,String secondName,String user,String pass) {
 		this.dni=dni;
 		this.pass=pass;
@@ -80,6 +81,19 @@ public class User extends Entity<User>{
 	public boolean MaxDniVal() {
 		// TODO Auto-generated method stub
 		return (this.strdni.length()>9);
+	}
+	public boolean emptyIntDniVal() {
+		// TODO Auto-generated method stub
+		return String.valueOf(dni).isEmpty();
+	}
+	public boolean MinIntDniVal() {
+		// TODO Auto-generated method stub
+		return String.valueOf(dni).length()<8;
+		
+	}
+	public boolean MaxIntDniVal() {
+		// TODO Auto-generated method stub
+		return String.valueOf(dni).length()>9;
 	}
 	public boolean emptyNameVal() {
 		// TODO Auto-generated method stub

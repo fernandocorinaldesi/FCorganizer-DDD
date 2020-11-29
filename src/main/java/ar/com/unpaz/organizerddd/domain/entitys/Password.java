@@ -2,11 +2,11 @@ package ar.com.unpaz.organizerddd.domain.entitys;
 
 public class Password extends Entity<Password> {
 	
-	String pass;
-	String user;
-	String site;
-	int passId;
-	int dni;
+	private String pass;
+	private String user;
+	private String site;
+	private int passId;
+	private int dni;
 	
 	public Password(int passId,String site,String user,String pass,int dni) {
 		this.passId=passId;
