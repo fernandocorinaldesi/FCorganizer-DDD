@@ -2,7 +2,6 @@ package ar.com.unpaz.organizerddd.application.services;
 
 import java.util.List;
 
-import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
 import ar.com.unpaz.organizerddd.locator.Context;
@@ -37,6 +36,13 @@ public abstract class AppServiceImp<E> implements AppServices<E>{
 		}
 		else
 		repository.insert(pass);
+		return true;	
+
+	}
+	@Override
+	public boolean updateEntity(E entity) {
+		// TODO Auto-generated method stub
+		repository.update(entity);
 		return true;	
 
 	}

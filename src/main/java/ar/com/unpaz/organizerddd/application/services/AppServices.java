@@ -8,4 +8,5 @@ public interface AppServices <E>{
 	public boolean addEntity(E entity);
 	public void delEntity(E entity);
 	public boolean existEntity(List<E> list,E entity);
+	public boolean updateEntity(E entity);
 }
