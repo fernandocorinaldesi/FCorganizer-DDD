@@ -41,5 +41,10 @@ public class InMemoryUserRepository extends AbstractInMemoryRepository<User>{
 		// TODO Auto-generated method stub
 		userlist.remove(String.valueOf(entity.getDni()));
 	}
+	@Override
+	public void update(User entity) {
+		// TODO Auto-generated method stub
+		userlist.put(String.valueOf(entity.getDni()),entity);
+	}
 
 }

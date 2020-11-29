@@ -55,5 +55,10 @@ public class InMemoryPasswordRepository extends AbstractInMemoryRepository<Passw
 				            entity.getPass(),
 				            entity.getDni());
 	}
+	@Override
+	public void update(Password entity) {
+		// TODO Auto-generated method stub
+		return;
+	}
 
 }

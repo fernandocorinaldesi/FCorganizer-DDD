@@ -78,4 +78,10 @@ public class PasswordRepositoryImp implements IRepository<Password> {
 		 return result;
 	}
 
+	@Override
+	public void update(Password entity) {
+		// TODO Auto-generated method stub
+		return;
+	}
+
 }
