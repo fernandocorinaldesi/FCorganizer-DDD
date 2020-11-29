@@ -1,7 +1,5 @@
 package ar.com.unpaz.organizerddd.application.services;
 
-import java.util.List;
-
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
@@ -14,12 +12,6 @@ public class AppServiceUser extends AppServiceImp<User>{
 		super(userrepository, 
 			  domainservices);
 		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public List<User> getList() {
-		// TODO Auto-generated method stub
-		return this.repository.get();
 	}
 
 }

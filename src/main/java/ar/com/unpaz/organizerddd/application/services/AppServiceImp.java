@@ -2,6 +2,7 @@ package ar.com.unpaz.organizerddd.application.services;
 
 import java.util.List;
 
+import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.domain.repositorycontracts.IRepository;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
 import ar.com.unpaz.organizerddd.locator.Context;
@@ -38,6 +39,12 @@ public abstract class AppServiceImp<E> implements AppServices<E>{
 		repository.insert(pass);
 		return true;	
 
+	}
+	
+	@Override
+	public List<E> getList() {
+		// TODO Auto-generated method stub
+		return repository.get();
 	}
 
 	@Override
