@@ -38,10 +38,6 @@ public class SelectorImp implements Selector{
 	    ((AppServicePass)appservicepass).setUser(user);
 		mainview.load();
 		mainview.startView();
-		if(EnviromentVariables.INMEMORY) {
-			mainview.showWarningInMemMsg();
-		}
-		
 		mainview.setLogOut(loginController);
 		mainview.setDefault(user.getDni());
 		
@@ -52,9 +48,6 @@ public class SelectorImp implements Selector{
 		// TODO Auto-generated method stub
 		adminview.load();
 		adminview.startView();
-		if(EnviromentVariables.INMEMORY) {
-			mainview.showWarningInMemMsg();
-		}
 		adminview.setLogOut(loginController);
 	}
 
