@@ -26,6 +26,7 @@ import javax.swing.JPanel;
 import ar.com.unpaz.organizerddd.presentation.controllers.IController;
 import ar.com.unpaz.organizerddd.presentation.custom.MyTitleBar;
 import ar.com.unpaz.organizerddd.presentation.custom.SideButton;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public abstract class AbstractMainView<E> extends JFrame implements MainViewOperations<E>{
 
@@ -113,7 +114,7 @@ public abstract class AbstractMainView<E> extends JFrame implements MainViewOper
 		
 	}
 	public void showInMemWarning() {
-		 JOptionPane.showMessageDialog(this, "Esta aplicacion se esta ejecutando en modo en memoria. Este modo esta pensando para realizar test, por lo tanto los cambios no seran guardados", "Cuidado",
+		 JOptionPane.showMessageDialog(this, "Esta aplicacion se esta ejecutando en modo en memoria. \n Este modo esta pensando para realizar test, por lo tanto \n los cambios no seran guardados", "Cuidado",
 			        JOptionPane.WARNING_MESSAGE);
 			  
 	}
@@ -131,6 +132,10 @@ public abstract class AbstractMainView<E> extends JFrame implements MainViewOper
 	public void setVisible() {
 		setLocationRelativeTo(null);
 		setVisible(true);
+		
+		if(EnviromentVariables.INMEMORY) {
+			showInMemWarning();
+		}
 	}
 
 	@Override
