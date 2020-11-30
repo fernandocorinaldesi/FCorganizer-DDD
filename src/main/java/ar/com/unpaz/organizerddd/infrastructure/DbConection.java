@@ -34,7 +34,8 @@ public class DbConection {
 		FileInputStream fis = new FileInputStream(path);
 		prop.loadFromXML(fis);
 		final String url = prop.getProperty("url");
-		return DriverManager.getConnection(url,"sa","");
+		final String user = prop.getProperty("user");
+		return DriverManager.getConnection(url,user,"");
 	}
 
 }
