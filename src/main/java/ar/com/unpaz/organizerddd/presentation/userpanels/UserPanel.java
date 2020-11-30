@@ -108,6 +108,8 @@ public class UserPanel extends JPanel {
 		reg.addActionListener((event) -> {
 			userdiagAdd.setController(controller);
 			userdiagAdd.setVisible(true);
+			
+		
 		});
 		mod.addActionListener((event) -> {
 			userdiagUp.setController(controller);

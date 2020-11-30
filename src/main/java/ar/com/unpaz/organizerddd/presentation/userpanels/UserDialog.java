@@ -79,12 +79,14 @@ public abstract class UserDialog extends JDialog {
 
 	private void initConfig() {
 		// TODO Auto-generated method stub
+		
 		setSize(WIDTH, HEIGHT);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setUndecorated(true);
 		setAlwaysOnTop(true);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setModal(true);
 	}
 
 	private void initPanels() {
@@ -106,7 +108,7 @@ public abstract class UserDialog extends JDialog {
 		String user = userField.getText();
 		String pass =passField.getText();
 		String dni =dniField.getText();
-		int Dni =dni.isEmpty()?0:Integer.parseInt(dni);
+		int Dni = Integer.parseInt(dni);
 		return new User(Dni,name,secondName,user,pass);
 	}
 

@@ -16,6 +16,7 @@ public class UserDialogAdd extends UserDialog{
 	@Override
 	public void initlisteners() {
 		// TODO Auto-generated method stub
+		
 		accept.addActionListener((event) -> {
 			if (controller.validate(createUser())) {
 				if (controller.register(sendUser())) {
