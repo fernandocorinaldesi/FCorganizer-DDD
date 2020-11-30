@@ -1,7 +1,7 @@
 # FCorganizer-DDD
 <a href="http://www.unpaz.edu.ar"><img src="https://www.unpaz.edu.ar/sites/default/files/unpaz_0.png" title="FVCproductions" alt="UNPAZ"></a>
 
-# Empezando con Primera practica en DDD para laboratorio de software
+# Empezando con TP integrador para laboratorio de software
 
 ## Tabla de contenidos
 - [Empezando](#Empezando)
