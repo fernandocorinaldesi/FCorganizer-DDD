@@ -8,8 +8,8 @@
   - [Requerimientos](#Requerimientos)
   - [Dependencias](#Dependencias)
   - [Diseño](#Diseño)  
-  - [Screenshot](#Screenshot)
   - [Despliegue](#Despliegue)
+  - [Screenshot](#Screenshot)
   - [Contacto](#Contacto)
   - [Licencia](#Licencia)
  
@@ -50,16 +50,37 @@ Dominio | en construccion | en construccion
 Infraestructura de persistencia| en construccion | en construccion  
 Infraestructura transversal| en construccion | en construccion 
 
-Diagramas de clases  
+#### Diagramas de clases  
+Algunos diagramas importantes : 
 
+Repositorios  
 ![screenshoot](https://i.ibb.co/BcvSrQd/repository-spec-inmem.jpg)
-![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)
-![screenshoot](https://i.ibb.co/Gsc9Sbk/Transversal-validator.jpg) 
+Controladores de la capa de presentación  
+![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)  
+Validador de la presentacion
+![screenshoot](https://i.ibb.co/z6ZvqgJ/front-validator.jpg) 
+
+### Despliegue
+A continuacion se enumeraran y explicaran los pasos para desplegar la aplicacion, para esto se debe generar desde el codigo fuente un archivo.jar ejecutable
+
+#### 1- Descargar el codigo fuente de este repositorio  
+Desde la consola ejecutar el comando git clone https://github.com/fernandocorinaldesi/FCorganizer-DDD.git  
+![screenshoot](https://i.ibb.co/VNPLVjy/consoleclone.jpg) 
+
+#### 2- Importar el repositorio a eclipse  
+Ejecutar eclipse  y en la pestaña file elegir import,luego en la siguiente ventana seleccionar el directorio donde fue descargado el codigo fuente y apretar finish  
+![screenshoot](https://i.ibb.co/wQS59tR/paso2.jpg)
+
+
+#### 3- Generar el jar ejecutable  
+Posicionado en el proyecto hacer click con el boton derecho del mouse y elegir export. En la ventana siguiente seleccionar Runnable JAR file y la ruta donde sera generado
+![screenshoot](https://i.ibb.co/kmczCkk/runjar.jpg)
+
+#### 4- Ejecutar el jar  
+Posicionarse sobre la ruta destino elegida y ejecutar el jar generado como cualquier archivo ejecutable  
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
-
-### Despliegue
 
 ### Contacto
 
