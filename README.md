@@ -8,8 +8,8 @@
   - [Requerimientos](#Requerimientos)
   - [Dependencias](#Dependencias)
   - [Diseño](#Diseño)  
-  - [Screenshot](#Screenshot)
   - [Despliegue](#Despliegue)
+  - [Screenshot](#Screenshot)
   - [Contacto](#Contacto)
   - [Licencia](#Licencia)
  
@@ -60,9 +60,6 @@ Controladores de la capa de presentación
 Validador de la presentacion
 ![screenshoot](https://i.ibb.co/z6ZvqgJ/front-validator.jpg) 
 
-### Screenshot
-![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
-
 ### Despliegue
 A continuacion se enumeraran y explicaran los pasos para desplegar la aplicacion, para esto se debe generar desde el codigo fuente un archivo.jar ejecutable
 
@@ -81,6 +78,9 @@ Posicionado en el proyecto hacer click con el boton derecho del mouse y elegir e
 
 #### 4- Ejecutar el jar  
 Posicionarse sobre la ruta destino elegida y ejecutar el jar generado como cualquier archivo ejecutable  
+
+### Screenshot
+![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
 
 ### Contacto
 
