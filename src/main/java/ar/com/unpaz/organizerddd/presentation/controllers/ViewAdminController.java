@@ -16,7 +16,7 @@ public class  ViewAdminController extends ViewAbstractController<User>{
 		  mainview,
 		  frontValidator);
 
-    injectControllerInView();
+   
    }
 
    @Override

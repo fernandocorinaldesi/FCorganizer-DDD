@@ -16,7 +16,7 @@ public class ViewPasswordController extends ViewAbstractController<Password> {
 		  mainview,
 		  frontValidator);
 		
-		injectControllerInView();
+		
 	}
 
 	@Override

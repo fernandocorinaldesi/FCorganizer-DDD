@@ -18,7 +18,7 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 		this.mainview=mainview;
 		this.appservice=appservice;
 		this.frontValidator=frontValidator;
-		// TODO Auto-generated constructor stub
+		injectControllerInView();
 	}
 
 	@Override
