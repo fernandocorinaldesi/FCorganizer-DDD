@@ -50,11 +50,15 @@ Dominio | en construccion | en construccion
 Infraestructura de persistencia| en construccion | en construccion  
 Infraestructura transversal| en construccion | en construccion 
 
-Diagramas de clases  
+#### Diagramas de clases  
+Algunos diagramas importantes : 
 
+Repositorios  
 ![screenshoot](https://i.ibb.co/BcvSrQd/repository-spec-inmem.jpg)
-![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)
-![screenshoot](https://i.ibb.co/Gsc9Sbk/Transversal-validator.jpg) 
+Controladores de la capa de presentación  
+![screenshoot](https://i.ibb.co/7QG5Szp/presentationjpg.jpg)  
+Validador de la presentacion
+![screenshoot](https://i.ibb.co/z6ZvqgJ/front-validator.jpg) 
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
