@@ -44,11 +44,11 @@ Detalles generales y de diseño de la App:
 
 Layer     | Type   | Descripcion
 --------------------- | -------------------- | ---------------------  
-Presentacion | en construccion | en construccion
-Aplicacion | en construccion | en construccion
-Dominio | en construccion | en construccion  
-Infraestructura de persistencia| en construccion | en construccion  
-Infraestructura transversal| en construccion | en construccion 
+Presentacion | Main layer | Esta capa representa la vista de la aplicacion. Contiene tambien los controladores que la manejan.
+Aplicacion | Main layer | Esta capa se encarga de las tareas de fontaneria, es como un orquestar que interactua con el dominio y los repositorios.
+Dominio | Main layer | Es la capa principal y el corazon de la aplicación. En esta capa residen las reglas de negocio, asi como tambien las entidades del dominio.
+Infraestructura de persistencia| Main layer | Es la capa encarga de implementar la persistencia de nuestro modelo de dominio
+Infraestructura transversal| Main layer | Esta capa se encarga de los aspectos transversales: authenticación, autorización, validación, logging, configuración, y de contener ciertos componentes reusables.
 
 #### Diagramas de clases  
 Algunos diagramas importantes : 
