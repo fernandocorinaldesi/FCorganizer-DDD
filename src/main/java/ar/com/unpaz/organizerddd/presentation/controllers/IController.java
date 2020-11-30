@@ -17,6 +17,6 @@ public interface IController <E>{
 	public void setLogOut(LoginController loginController);
 	public void setDefault(int dni);
 	public int getDefault();
-	public void showWarningInMemMsg();
+	
 	
 }
