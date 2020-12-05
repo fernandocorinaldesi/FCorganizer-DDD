@@ -79,6 +79,15 @@ Posicionado en el proyecto hacer click con el boton derecho del mouse y elegir e
 #### 4- Ejecutar el jar  
 Posicionarse sobre la ruta destino elegida y ejecutar el jar generado como cualquier archivo ejecutable  
 
+#### 5- Login
+Ahora solo hay que logearse con las siguientes credenciales usuario: admin contraseña:admin 
+
+#### 6- Creacion de usuario
+Crea un nuevo usuario con tus datos,nombre de usuario y contraseña 
+
+#### 7- Login con tu nuevo usuario
+Ahora debes logearte con el usuario y la contraseña del usuario que creaste y podras acceder al módulo para guardar contraseñas.  
+
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
 
