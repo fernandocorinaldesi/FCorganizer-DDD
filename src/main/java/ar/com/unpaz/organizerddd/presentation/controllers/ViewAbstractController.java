@@ -94,15 +94,6 @@ public abstract class ViewAbstractController<E> implements IController<E>{
 		mainview.setLogOut(loginController);
 		
 	}
-	@Override
-	public void setDefault(int dni) {
-		this.dni=dni;
-	}
-	
-	@Override
-	public int getDefault() {
-		return dni;
-	}
 	
 	public abstract void injectControllerInView();
 

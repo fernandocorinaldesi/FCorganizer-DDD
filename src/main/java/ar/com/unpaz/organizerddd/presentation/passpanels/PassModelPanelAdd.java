@@ -6,8 +6,8 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+
 import ar.com.unpaz.organizerddd.domain.entitys.Password;
-import ar.com.unpaz.organizerddd.locator.Context;
 import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class PassModelPanelAdd extends PassModelPanel {
@@ -63,7 +63,7 @@ public class PassModelPanelAdd extends PassModelPanel {
 		String site = getSite();
 		String user = getUser();
 		String pass = getPass();
-		return new Password(site, user, pass,controller.getDefault());
+		return new Password(site, user, pass,EnviromentVariables.loggedUserDni);
 	}
 
 }

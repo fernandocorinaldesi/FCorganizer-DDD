@@ -4,11 +4,12 @@ import ar.com.unpaz.organizerddd.application.dto.Credentials;
 import ar.com.unpaz.organizerddd.domain.entitys.User;
 import ar.com.unpaz.organizerddd.presentation.controllers.Selector;
 import ar.com.unpaz.organizerddd.presentation.loginview.LoginViewOperations;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class LoginControllerImp implements LoginController{
-	LoginViewOperations loginview;
-	Selector selector;
-
+	private LoginViewOperations loginview;
+	private Selector selector;
+	boolean viewOn;
 	public LoginControllerImp(LoginViewOperations loginview, 
 			                  Selector selector) {
 		this.loginview=loginview;
@@ -20,29 +21,39 @@ public class LoginControllerImp implements LoginController{
 	public void startView() {
 		// TODO Auto-generated method stub
 		loginview.startView();
+		this.viewOn=true;
 	}
 	@Override
 	public void closeView() {
 		// TODO Auto-generated method stub
 		loginview.close();
+		this.viewOn=false;
+		
 	}
 
 	@Override
 	public void checkCredentials(String user, String pass) {
 		// TODO Auto-generated method stub
 		User usuario=selector.getUser(new Credentials(user,pass));
-		if(user.equals("admin") && pass.equals("admin")) {
+		if(user.equals(EnviromentVariables.ADMINUSER) && pass.equals(EnviromentVariables.ADMINPASS)) {
 			selector.loadAdminModule();
-        	loginview.close();
+        	closeView();
 		}
+		
 		else if(usuario!=null) {
-			selector.startApp(usuario);
+			EnviromentVariables.loggedUserDni=usuario.getDni();
+			selector.startApp();
         	loginview.close();
 		}
 
 		else {
-			loginview.showError("login incorrecto");
+			showError("login incorrecto");
 		}
 		
+	}
+	@Override
+	public void showError(String str) {
+		// TODO Auto-generated method stub
+		loginview.showError(str);
 	}
 }

@@ -6,7 +6,7 @@ import ar.com.unpaz.organizerddd.transversalinfrastructure.login.LoginController
 
 public interface Selector {
 	public void sendLogOut(LoginController loginController);
-	public void startApp(User usuario);
+	public void startApp();
 	public void loadAdminModule();
 	public User getUser(Credentials credentials);
 

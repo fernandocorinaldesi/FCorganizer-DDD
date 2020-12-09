@@ -6,5 +6,7 @@ public class EnviromentVariables {
 	 public static boolean INMEMORY=false;
 	 public static String ADMINUSER="admin";
 	 public static String ADMINPASS="admin";
+	 public static String UPDATEUSERERRORNOEXISTE;
+	 public static int loggedUserDni;
 
 }
