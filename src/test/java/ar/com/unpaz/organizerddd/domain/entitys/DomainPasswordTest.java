@@ -9,37 +9,36 @@ import org.junit.Test;
 public class DomainPasswordTest {
 
 	
-	private Password passEmpty;
-	private Password passMin;
-	private Password passMax;
+	private Password pass;
+
 
 
 	@Test
 	public void ValidacionPasswordCamposVacios() {
-		passEmpty=new Password("","fernando","corinaldesi",30038420);
-		assertTrue(passEmpty.emptySiteVal());
-		passEmpty=new Password("fernando","","corinaldesi",30038420);
-		assertTrue(passEmpty.emptyUserVal());
-		passEmpty=new Password("fernando","fernando","",30038420);
-		assertTrue(passEmpty.emptyPassVal());
+		pass=new Password("","fernando","corinaldesi",30038420);
+		assertTrue(pass.emptySiteVal());
+		pass=new Password("fernando","","corinaldesi",30038420);
+		assertTrue(pass.emptyUserVal());
+		pass=new Password("fernando","fernando","",30038420);
+		assertTrue(pass.emptyPassVal());
 	}
 	@Test
 	public void ValidacionPasswordTamañoMinimo() {
-		passMin=new Password("f","fernando","corinaldesi",30038420);
-		assertTrue(passMin.MinSiteVal());
-		passMin=new Password("fernando","f","corinaldesi",30038420);
-		assertTrue(passMin.MinUserVal());
-		passMin=new Password("fernando","fernando","c",30038420);
-		assertTrue(passMin.MinPassVal());
+		pass=new Password("f","fernando","corinaldesi",30038420);
+		assertTrue(pass.MinSiteVal());
+		pass=new Password("fernando","f","corinaldesi",30038420);
+		assertTrue(pass.MinUserVal());
+		pass=new Password("fernando","fernando","c",30038420);
+		assertTrue(pass.MinPassVal());
 	}
 	@Test
 	public void ValidacionPasswordTamañoMaximo() {
-		passMax=new Password("ffffffffffffffffffffffffffffffff","fernando","corinaldesi",30038420);
-		assertTrue(passMax.MaxSiteVal());
-		passMax=new Password("fernando","ffffffffffffffffffffffffffffffff","corinaldesi",30038420);
-		assertTrue(passMax.MaxUserVal());
-		passMax=new Password("fernando","fernando","ffffffffffffffffffffffffffffffff",30038420);
-		assertTrue(passMax.MaxPassVal());
+		pass=new Password("ffffffffffffffffffffffffffffffff","fernando","corinaldesi",30038420);
+		assertTrue(pass.MaxSiteVal());
+		pass=new Password("fernando","ffffffffffffffffffffffffffffffff","corinaldesi",30038420);
+		assertTrue(pass.MaxUserVal());
+		pass=new Password("fernando","fernando","ffffffffffffffffffffffffffffffff",30038420);
+		assertTrue(pass.MaxPassVal());
 	}
 	@Test
 	public void PasswordIgualesDeberiaDevolverTrue() {
