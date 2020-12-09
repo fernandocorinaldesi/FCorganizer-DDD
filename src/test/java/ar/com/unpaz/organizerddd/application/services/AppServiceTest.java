@@ -15,6 +15,7 @@ import ar.com.unpaz.organizerddd.domain.repositorycontracts.InMemoryUserReposito
 import ar.com.unpaz.organizerddd.domain.services.DomainPasswordServices;
 import ar.com.unpaz.organizerddd.domain.services.DomainUserService;
 import ar.com.unpaz.organizerddd.domain.services.IDomainServices;
+import ar.com.unpaz.organizerddd.transversalinfrastructure.EnviromentVariables;
 
 public class AppServiceTest {
 	private IRepository<Password> passwordrepository;
@@ -50,6 +51,14 @@ public class AppServiceTest {
 		assertTrue(appserviceuser.addEntity(user));
 	}
 	
+	@Test 
+	public void insertarMismoUsuarioDeberiaFallarYaExiste() {
+		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
+		assertTrue(appserviceuser.addEntity(user));
+		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
+		assertTrue(appserviceuser.existEntity(appserviceuser.getList(),user));
+	}
+	
 	@Test
 	public void actualizarUsuarioDeberiaSerExitoso() {
 		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
@@ -58,6 +67,14 @@ public class AppServiceTest {
 		appserviceuser.updateEntity(userupdate);
 		assertEquals(userupdate,appserviceuser.getList().get(0));
 		
+	}
+	
+	@Test
+	public void actualizarUsuarioDeberiaFallarNoExite() {
+		String error="El usuario no existe";
+		user=new User(30038420,"fernandooooo","corinaldesi","fernando","fernando");
+		appserviceuser.updateEntity(user);
+		assertEquals(EnviromentVariables.UPDATEUSERERRORNOEXISTE,error);
 	}
 	
 	@Test
@@ -75,7 +92,6 @@ public class AppServiceTest {
 	public void insertarPasswordDeberiaSerExitoso() {
 		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
 		appserviceuser.addEntity(user);
-		((AppServicePass)appservicepass).setUser(user);
 		pass=new Password("www.google.com","fernando","fernando",30038420);
 		assertTrue(appservicepass.addEntity(pass));
 	}
@@ -83,7 +99,6 @@ public class AppServiceTest {
 	public void insertarPasswordDeberiaFallar() {
 		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
 		appserviceuser.addEntity(user);
-		((AppServicePass)appservicepass).setUser(user);
 		pass=new Password("ww","fo","fernando",30038420);
 		assertFalse(appservicepass.addEntity(pass));
 	}
@@ -91,7 +106,6 @@ public class AppServiceTest {
 	public void insertarPasswordDeberiaFallarYaExiste() {
 		user=new User(30038420,"fernando","corinaldesi","fernando","fernando");
 		appserviceuser.addEntity(user);
-		((AppServicePass)appservicepass).setUser(user);
 		pass=new Password("www.google.com","fernando","fernando",30038420);
 		appservicepass.addEntity(pass);
 		assertFalse(appservicepass.addEntity(pass));
