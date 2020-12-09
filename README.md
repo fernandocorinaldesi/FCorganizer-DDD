@@ -1,7 +1,7 @@
 # FCorganizer-DDD
 <a href="http://www.unpaz.edu.ar"><img src="https://www.unpaz.edu.ar/sites/default/files/unpaz_0.png" title="FVCproductions" alt="UNPAZ"></a>
 
-# Empezando con Primera practica en DDD para laboratorio de software
+# Empezando con TP integrador para laboratorio de software
 
 ## Tabla de contenidos
 - [Empezando](#Empezando)
@@ -44,11 +44,11 @@ Detalles generales y de diseño de la App:
 
 Layer     | Type   | Descripcion
 --------------------- | -------------------- | ---------------------  
-Presentacion | en construccion | en construccion
-Aplicacion | en construccion | en construccion
-Dominio | en construccion | en construccion  
-Infraestructura de persistencia| en construccion | en construccion  
-Infraestructura transversal| en construccion | en construccion 
+Presentacion | Main layer | Esta capa representa la vista de la aplicacion. Contiene tambien los controladores que la manejan.
+Aplicacion | Main layer | Esta capa se encarga de las tareas de fontaneria, es como un orquestar que interactua con el dominio y los repositorios.
+Dominio | Main layer | Es la capa principal y el corazon de la aplicación. En esta capa residen las reglas de negocio, asi como tambien las entidades del dominio.
+Infraestructura de persistencia| Main layer | Es la capa encarga de implementar la persistencia de nuestro modelo de dominio
+Infraestructura transversal| Main layer | Esta capa se encarga de los aspectos transversales: authenticación, autorización, validación, logging, configuración, y de contener ciertos componentes reusables.
 
 #### Diagramas de clases  
 Algunos diagramas importantes : 
@@ -78,6 +78,15 @@ Posicionado en el proyecto hacer click con el boton derecho del mouse y elegir e
 
 #### 4- Ejecutar el jar  
 Posicionarse sobre la ruta destino elegida y ejecutar el jar generado como cualquier archivo ejecutable  
+
+#### 5- Login
+Ahora solo hay que logearse con las siguientes credenciales usuario: admin contraseña:admin 
+
+#### 6- Creacion de usuario
+Crea un nuevo usuario con tus datos,nombre de usuario y contraseña 
+
+#### 7- Login con tu nuevo usuario
+Ahora debes logearte con el usuario y la contraseña del usuario que creaste y podras acceder al módulo para guardar contraseñas.  
 
 ### Screenshot
 ![screenshoot](https://i.ibb.co/rdZvCzq/fc.jpg)  
