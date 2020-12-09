@@ -4,4 +4,5 @@ public interface LoginController {
 	 public void startView();
 	 public void closeView();
      public void checkCredentials(String user,String pass);
+     public void showError(String err);
 }
